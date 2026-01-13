@@ -1,0 +1,5 @@
+num = str(input('Digite um numero com ate 4 digitos: ')).zfill(4)
+print(f'Unidade: {num[3]}')
+print(f'Dezena: {num[2]}')
+print(f'Centena: {num[1]}')
+print(f'Milhar: {num[0]}')
