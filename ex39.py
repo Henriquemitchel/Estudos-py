@@ -1,8 +1,12 @@
-an = int(input('Qual ano voce nasceu? '))
-aa = an - 2026
-if aa < 18:
-    print('Voce ainda vai se alistar no exercito')
-elif aa == 18:
-    print('É hora de se alistar no exercito')
+from datetime import datetime
+
+an = int(input('Em que ano você nasceu? '))
+aa = datetime.now().year
+id = aa - an
+
+if id < 18:
+    print(f'Você tem {id} anos. Ainda vai se alistar no exército. ')
+elif id == 18:
+    print(f'Você tem {id} anos. É hora de se alistar no exército. ')
 else:
-    print('Ja passou do tempo de se alistar no exercito')
+    print(f'Você tem {id} anos. Já passou do tempo de se alistar no exército. ')
