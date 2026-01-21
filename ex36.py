@@ -1,8 +1,8 @@
 print('=='*20)
 print('SIMULE SEU EMPRESTIMO!')
 print('==' *20)
-vc = float(input('Qual valor da casa? '))
-s = float(input('Qual se salario? '))
+vc = float(input('Qual valor da casa? R$'))
+s = float(input('Qual se salario? R$'))
 a = int(input('Em quantos anos quer divir? ')) * 12
 vm = vc / a
 pm = s * 0.30

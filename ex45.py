@@ -1,19 +1,25 @@
+from random import randint
 from random import choice
 
-e = str(input('Qual você escolhe:\nPedra, Papel ou Tesoura? ')).strip().lower()
-p = 'pedra'
-pp = 'papel'
-t = 'tesoura'
+i = ['Pedra', 'Papel', 'Tesoura']
+e = int(input('\n[ 0 ] Pedra:\n[ 1 ] Papel:\n[ 2 ] Tesoura:\nQual você escolhe? '))
+print('')
+# p = 'pedra'
+# pp = 'papel'
+# t = 'tesoura'
+em = randint(0, 2)
 
-lista = [p,pp,t]
-em = choice(lista)
+# lista = [p,pp,t]
+# em = choice(lista)
 
 if e == em:
-    print(f'Nós escolhemos a mesma coisa, {e}. \033[0;36mDEU EMPATE\033[m')
-elif e == 'pedra' and em == 'tesoura' or e == 'papel' and em == 'pedra' or e == 'tesoura' and em == 'papel':
-    print(f'Você escolheu {e} e eu {em}. \033[0;32mVOCÊ VENCEU\033[m')
-elif e == 'pedra' and em == 'papel' or e == 'papel' and em == 'tesoura' or e == 'tesoura' and em == 'pedra':
-    print(f'Eu escolhi {em} e você {e}. \033[0;31mEU VENCI\033[m')
+    print(f'Escolheram a mesma coisa, {i[e]}.\n\033[0;36mDEU EMPATE\033[m')
+elif e == 0 and em == 2 or e == 1 and em == 0 or e == 2 and em == 1:
+    print(f'Jogar jogou {i[e]}\nComputador jogou {i[em]}.\n\033[0;32mJOGADOR VENCEU\033[m')
+elif e == 0 and em == 1 or e == 1 and em == 2 or e == 2 and em == 0:
+    print(f'Computador jogou {i[em]}\nJogador jogou {i[e]}.\n\033[0;31mCOMPUTADOR VENCI\033[m')
+else:
+    print('Escolha invalida, tente novamente.')
 
 
 

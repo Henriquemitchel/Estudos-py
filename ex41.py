@@ -4,12 +4,12 @@ ano = int(input('Qual seu ano de nascimento? '))
 id = datetime.now().year - ano
 
 if id <= 9:
-    print(f'Sua idade é {id} e sua categoria é: MIRIM')
+    print(f'Sua idade é {id} anos\nCategoria: MIRIM')
 elif id <= 14:
-    print(f'Sua idade é {id} e sua categoria é: INFANTIL')
+    print(f'Sua idade é {id} anos\nCategoria: INFANTIL')
 elif id <= 19:
-    print(f'Sua idade é {id} e sua categoria é: JUNIOR')
-elif id == 20:
-    print(f'Sua idade é {id} e sua categoria é: SENIOR')
+    print(f'Sua idade é {id} anos\nCategoria: JUNIOR')
+elif id <= 25:
+    print(f'Sua idade é {id} anos\nCategoria: SÊNIOR')
 else:
-    print(f'Sua idade é {id} e sua categoria é: MASTER')
+    print(f'Sua idade é {id} anos\nCategoria: MASTER')

@@ -2,22 +2,36 @@ l1 = float(input('Digite o tamanho do primeiro lado: '))
 l2 = float(input('Digite o tamanho do terceiro lado: '))
 l3 = float(input('Digite o tamanho do terceiro lado: '))
 
-def form_t(l1, l2, l3):
-    if l1 + l2 > l3 and l1 + l3 > l2 and l2 + l3 > l1:
-        return('Pode formar triangulo')
-    else:
-        return('Não forma triangulo')
-
-def tipo_t(l1,l2,l3):
+if l1 + l2 > l3 and l1 + l3 > l2 and l2 + l3 > l1:
+    print(f'A junção dos lados \033[0;32mPODE FORMAR\033[m um triângulo')
     if l1 == l2 == l3:
-        return('Trianuglo equilatero')
+        print(f'\033[0;36mEQUILATERO!\033[m')
     elif l1 == l2 and l1 != l3:
-        return('Triangulo isocelis')
+        print(f'\033[0;35mISÓCELIS!\033[m')
     else:
-        return('Triangulo escaleno')
+        print(f'\033[0;34mESCALÉNO!\033[m')
+else:
+    print(f'A junção dos lados \033[0;31mNÃO PODE FORMAR\033[m um triângulo.')
+
+# def tipo_t(l1,l2,l3):
+#     if l1 == l2 == l3:
+#         return(f'\033[0;36mEQUILATERO!\033[m')
+#     elif l1 == l2 and l1 != l3:
+#         return(f'\033[0;35mISÓCELIS!\033[m')
+#     else:
+#         return(f'\033[0;34mESCALÉNO!\033[m')
     
-print(form_t(l1,l2,l3))
-print(tipo_t(l1,l2,l3))
+# def form_t(l1, l2, l3):
+#     if l1 + l2 > l3 and l1 + l3 > l2 and l2 + l3 > l1:
+#         return True
+#     else:
+#         return False
+
+# if form_t(l1,l2,l2) == True:
+#     print(f'A junção dos lados \033[0;32mPODE FORMAR\033[m um triângulo' , tipo_t(l1,l2,l3))
+# else:
+#     print(f'A junção dos lados \033[0;31mNÃO PODE FORMAR\033[m um triângulo.')
+
 
 
     
